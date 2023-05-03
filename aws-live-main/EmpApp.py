@@ -17,40 +17,38 @@ output = {}
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
-        return render_template('aws-live-main/templates/CustomerRegisteration.html')
+        return render_template('CustomerRegisteration.html')
 
 
 @app.route("/about", methods=['POST'])
 def about():
     return render_template('www.airAsia.com')
 
-
 @app.route("/submitBooking", methods=['POST'])
 def submitBooking():
-    customer_firstName = request.form['firstName']
-    customer_lastName = request.form['lastName']
+    print("booking function called")
+    print(request.form)
+
+    customer_firstname = request.form['fname']
+    customer_lastname = request.form['lname']
     customer_email = request.form['email']
     phone = request.form['phone']
-    ic_number = request.form['icNumber']
+    ic_number = request.form['icnumber']
     country = request.form['country']
     password = request.form['password']
 
-
-    insert_sql = "INSERT INTO customer VALUES (%s, %s, %s, %s, %s,%s,%s)"
+    insert_sql = "INSERT INTO customer(first_name, last_name, email, phone, ic_number, country, password) VALUES (%s, %s, %s, %s, %s, %s, %s)"
     cursor = db_conn.cursor()
 
-    try :
-        cursor.execute(insert_sql,(customer_firstName,customer_lastName,customer_email,phone,ic_number,country,password))
+    try:
+        cursor.execute(insert_sql, (customer_firstname, customer_lastname, customer_email, phone, ic_number, country, password))
         db_conn.commit()
-
     except Exception as e:
-        return str("Error occured with message: " + e)
-    
+        return "Error occurred with message: " + str(e)
     finally:
-         cursor.close()
-         return render_template("aws-live-main/templates/RegisterationSuccess.html")
+        cursor.close()
+
+    return render_template("RegisterationSuccess.html",customer_firstname=customer_firstname,customer_lastname=customer_lastname,customer_email=customer_email)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)
-
-

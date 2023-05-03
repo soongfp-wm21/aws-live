@@ -134,13 +134,14 @@ footer {
 </head>
 <body>
 	<header>
-		<h1 style="color:white">AirAsia Booking Ticket Website</h1>
+		<h1 style="color:white">AirAsia</h1>
 		<nav>
 			<ul>
 				<li><a href="#">Home</a></li>
 				<li><a href="#">Flights</a></li>
 				<li><a href="#">Hotels</a></li>
 				<li><a href="#">Car Rentals</a></li>
+        <li><a href="/about">About us</a></li>
 			</ul>
 			<ul>
 				<li><a href="#">Login</a></li>
@@ -150,24 +151,25 @@ footer {
 	</header>
 	<main>
 		<h2>Customer Registration</h2>
-		<form>
+
+    <form method="POST" action="/submitBooking" autocomplete="on"  enctype="multipart/form-data">
 			<label for="firstName">First name:</label>
-			<input type="text" id="firstName" name="firstName" required>
+			<input type="text" id="firstName" name="fname" required>
 
 			<label for="lastName">Last name:</label>
-			<input type="text" id="lastName" name="lastName" required>
+			<input type="text" id="lastName" name="lname" required>
 
 			<label for="email">Email:</label>
 			<input type="email" id="email" name="email" required>
-
-			<label for="password">Password:</label>
-			<input type="password" id="password" name="password" required>
 
 			<label for="phone">Phone:</label>
 			<input type="text" id="phone" name="phone" required>
 			
 			<label for="phone">IC number:</label>
-			<input type="text" id="icNumber" name="icNumber" required>
+			<input type="text" id="icNumber" name="icnumber" required>
+      
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" required>
 
 			<label for="country">Country:</label>
 			<select id="country" name="country" required>

@@ -3,134 +3,136 @@
 <head>
 	<style>
 		body {
-			background-color: #f2f2f2;
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-		}
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}	
 
-		header {
-			background-color: white;
-			box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-			padding: 20px;
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			z-index: 1;
-		}
+header {
+  background-color: #FF0000;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
 
-		h1 {
-			color: #003366;
-			font-size: 36px;
-			margin: 0;
-		}
+h1 {
+  color: #ffffff;
+  font-size: 36px;
+  margin: 0;
+}
 
-		nav {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			margin-top: 10px;
-		}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
 
-		nav ul {
-			display: flex;
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-		}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-		nav ul li {
-			margin-left: 20px;
-		}
+nav ul li {
+  margin-left: 20px;
+}
 
-		nav ul li a {
-			color: #666;
-			text-decoration: none;
-			font-size: 16px;
-			font-weight: bold;
-			transition: color 0.2s;
-		}
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.2s;
+}
 
-		nav ul li a:hover {
-			color: #003366;
-		}
+nav ul li a:hover {
+  color: #ffcccc;
+}
 
-		main {
-			margin-top: 80px;
-			padding: 20px;
-		}
+main {
+  margin-top: 80px;
+  padding: 20px;
+}
 
-		h2 {
-			color: #003366;
-			font-size: 24px;
-			margin: 20px 0;
-		}
+h2 {
+  color: #FF0000;
+  font-size: 24px;
+  margin: 20px 0;
+}
 
-		form {
-			background-color: white;
-			box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-			padding: 20px;
-			border-radius: 5px;
-		}
+form {
+  background-color: #ffffff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 5px;
+}
 
-		label {
-			display: block;
-			font-size: 16px;
-			font-weight: bold;
-			margin-bottom: 10px;
-		}
+label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #FF0000;
+}
 
-		input[type=text], input[type=email], input[type=date], select {
-			width: 100%;
-			padding: 10px;
-			margin-bottom: 20px;
-			border: none;
-			border-radius: 5px;
-			box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-			transition: box-shadow 0.2s;
-		}
+input[type=text],
+input[type=email],
+input[type=password],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s;
+}
 
-		input[type=text]:focus, input[type=email]:focus, input[type=date]:focus, select:focus {
-			outline: none;
-			box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-		}
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+select:focus {
+  outline: none;
+  box-shadow: 1px 1px 5px rgba(255, 77, 77, 0.5);
+}
 
-		button {
-			background-color: #003366;
-			color: white;
-			padding: 10px;
-			border: none;
-			border-radius: 5px;
-			font-size: 16px;
-			cursor: pointer;
-			transition: background-color 0.2s;
-		}
+button {
+  background-color: #FF0000;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
 
-		button:hover {
-			background-color: #002147;
-		}
+button:hover {
+  background-color: #ff9999;
+}
 
-		footer {
-			background-color: white;
-			box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.2);
-			padding: 20px;
-			margin-top: 20px;
-			text-align: center;
-		}
-
-		footer p {
-			color: #666;
-		font-size:14px;
-		margin: 0;
-		padding: 0;
-	}
+footer {
+  background-color: #ffffff;
+  box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  color: #666666;
+  font-size: 14px;
+}
 
 	</style>
 	</head>
 	<body>
 		<header>
-			<h1 style="color:red">AirAsia Customer Registration</h1>
+			<h1 style="color:white">AirAsia</h1>
 			<nav>
 				<ul>
 					<li><a href="#">Home</a></li>
@@ -148,12 +150,9 @@
 			<h2>Registration Successful</h2>
 			<p>Thank you for registering with AirAsia!</p>
 			<p>The following information has been added to our database:</p>
-			<p>Name: {{ name }}</p>
-			<p>Email: {{ email }}</p>
-			<p>Phone: {{ phone }}</p>
-			<p>IC Number: {{ ic_number }}</p>
-			<p>Country: {{ country }}</p>
-			<form action="http://3.134.115.108:80/">
+			<p>Name: {{ customer_firstname + " " + customer_lastname }}</p>
+			<p>Email: {{ customer_email }}</p>
+			<form action="/">
 				<button type="submit">Go back to homepage</button>
 			</form>
 		</main>
