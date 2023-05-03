@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Airline Booking Ticket Website</title>
+	<style>
+		body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #FF0000;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 36px;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: #ffcccc;
+}
+
+main {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+h2 {
+  color: #FF0000;
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+form {
+  background-color: #ffffff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #FF0000;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+select:focus {
+  outline: none;
+  box-shadow: 1px 1px 5px rgba(255, 77, 77, 0.5);
+}
+
+button {
+  background-color: #FF0000;
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #ff9999;
+}
+
+footer {
+  background-color: #ffffff;
+  box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  color: #666666;
+  font-size: 14px;
+}
+
+
+</style>
+</head>
+<body>
+	<header>
+		<h1 style="color:white">AirAsia Booking Ticket Website</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Flights</a></li>
+				<li><a href="#">Hotels</a></li>
+				<li><a href="#">Car Rentals</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Login</a></li>
+				<li><a href="#">Register</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h2>Customer Registration</h2>
+		<form>
+			<label for="firstName">First name:</label>
+			<input type="text" id="firstName" name="firstName" required>
+
+			<label for="lastName">Last name:</label>
+			<input type="text" id="lastName" name="lastName" required>
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" required>
+
+			<label for="phone">Phone:</label>
+			<input type="text" id="phone" name="phone" required>
+			
+			<label for="phone">IC number:</label>
+			<input type="text" id="icNumber" name="icNumber" required>
+
+			<label for="country">Country:</label>
+			<select id="country" name="country" required>
+
+				<option value="">Select your country</option>
+				<option value="Indonesia">Indonesia</option>
+				<option value="Malaysia">Malaysia</option>
+				<option value="Philippines">Philippines</option>
+				 <option value="Singapore">Singapore</option>
+				<option value="Thailand">Thailand</option>
+				<option value="Vietnam">Vietnam</option>
+			</select>
+			
+			<button type="submit">Register</button>
+		</form>
+	</main>
+	<footer>
+		<p>&copy; 2023 Airline Booking Ticket Website</p>
+	</footer>
+</body>
+</html>
