@@ -6,7 +6,7 @@
 yum update -y
 yum install git -y
 git clone https://github.com/soongfp-wm21/aws-live.git
-cd aws-live
+cd aws-live/aws-live-main/
 yum install python-pip -y
 pip3 install flask pymysql boto3
 python3 EmpApp.py
